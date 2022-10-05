@@ -1,16 +1,16 @@
-const UpBtn = document.querySelectorAll("Button")[1];
-console.log(UpBtn);
-const DawnBtn = document.querySelectorAll("Button")[0];
-console.log(DawnBtn);
+const btnDecrement = document.querySelector(`button[data-action="decrement"]`);
+const btnIncrement = document.querySelector(`button[data-action="increment"]`);
 
 let counterValue = 0;
-UpBtn.addEventListener(`click`, (event) => {
-  counterValue += 1;
-  const ValueEl = document.querySelector(`span`);
-  ValueEl.textContent = counterValue;
-});
-DawnBtn.addEventListener(`click`, (event) => {
+
+btnDecrement.addEventListener("click", (event) => {
   counterValue = counterValue - 1;
-  const ValueEl = document.querySelector(`span`);
-  ValueEl.textContent = counterValue;
+  let counterClick = document.querySelector("span");
+  counterClick.textContent = counterValue;
+});
+
+btnIncrement.addEventListener("click", (event) => {
+  counterValue += 1;
+  let counterClick = document.querySelector("span");
+  counterClick.textContent = counterValue;
 });
