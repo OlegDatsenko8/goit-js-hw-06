@@ -1,12 +1,12 @@
-const input = document.querySelector("#validation-input");
-input.addEventListener("blur", (event) => {
-  if (event.currentTarget.value.length == input.dataset.length) {
-    input.classList.add("valid");
-    input.classList.remove("invalid");
-    console.log(input);
+const inputRef = document.querySelector("#name-input");
+const spanRef = document.querySelector("#name-output");
+
+inputRef.addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+
+  if (inputValue) {
+    spanRef.textContent = inputValue;
   } else {
-    input.classList.add("invalid");
-    input.classList.remove("valid");
-    console.log(input);
+    spanRef.textContent = "Anonymous";
   }
 });
