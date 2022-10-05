@@ -10,4 +10,3 @@ liofCategories.forEach((element) => {
   console.log(`Categories:`, h2Ref.textContent);
   console.log(`Elements:`, elements.length);
 });
-
